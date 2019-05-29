@@ -28,7 +28,7 @@ class App extends React.Component {
     }
     //Have to define a render method 
     render () {
-        return <div> Lattitude : {this.state.lat}</div>
+        return <div> Lattitude : { this.state.lat }</div>
     }
 }
 
