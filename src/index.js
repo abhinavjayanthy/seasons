@@ -6,7 +6,7 @@ const App = () => {
         (position) => console.log(position),
         (err) => console.log(err)
     )
-    // Cannot update the div here as this is a function based componet so should move to class based componets 
+    // Cannot update the div here with the location as this is a function based componet so should move to class based componets 
     return <div>Hi there!!</div>
 };
 
