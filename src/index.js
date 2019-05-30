@@ -34,8 +34,8 @@ class App extends React.Component {
             (err) => this.setState({errorMessage : err.message})
         )
     }
-    //Have to define a render method its only about returing jsx nothing else 
-    render () {
+    // Best practise 
+    renderContent (){
         if(this.state.errorMessage  && !this.state.lat){
             return <div>Error : { this.state.errorMessage }</div>
         }else if (!this.state.errorMessage  && this.state.lat){
@@ -43,7 +43,14 @@ class App extends React.Component {
             return <SeasonDisplay withLat = {this.state.lat}/>
         }
         return <div><LoadingScreen message="Please accept location request"/></div>
-        
+    }
+    //Have to define a render method its only about returing jsx nothing else 
+    render () {
+        return (
+        <div>
+            {this.renderContent()}
+        </div> 
+        );  
     }
 }
 
