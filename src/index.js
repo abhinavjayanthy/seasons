@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay'
-
+import LoadingScreen from './LoadingScreen'
 // Below is function based component 
 // const App = () => {
 
@@ -42,7 +42,7 @@ class App extends React.Component {
             // State is going as a prop here 
             return <SeasonDisplay withLat = {this.state.lat}/>
         }
-        return <i class="massive spinner loading icon"></i>
+        return <div><LoadingScreen/></div>
         
     }
 }
