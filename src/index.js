@@ -42,7 +42,7 @@ class App extends React.Component {
             // State is going as a prop here 
             return <SeasonDisplay withLat = {this.state.lat}/>
         }
-        return <div><LoadingScreen/></div>
+        return <div><LoadingScreen message="Please accept location request"/></div>
         
     }
 }
